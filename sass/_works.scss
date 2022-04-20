@@ -1,0 +1,75 @@
+.works{
+    padding: 50px 0;
+    &__flex{
+        display: flex;
+        justify-content:space-between;
+    }
+    &__card{
+        max-width: 320px;
+        text-align: center;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .changiable{
+        margin-top:40px;
+    }
+    &__text{
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 11px;
+    }
+    @media only screen and (max-width:1070px){
+        &__title{
+            font-size:25px;
+            line-height:30px;
+        }
+        &__text{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    @media only screen and (max-width:980px){
+       &__card:nth-child(2){
+           margin:0 15px;
+       }
+       &__card-image:first-child{
+           height: 156px;
+       }
+        &__title{
+            font-size:20px;
+            line-height:25px;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    @media only screen and (max-width:690px){
+        &__flex{
+            flex-direction: column;
+        }
+        &__card{
+            display: flex;
+            align-items:flex-end;
+            text-align: left;
+            max-width: 100%;
+            &-inner{
+                margin-left: 20px;
+            }
+        }
+        &__card:nth-child(2){
+            margin: 20px 0;
+        }
+        &__card-image:first-child{
+            height: 105px;
+        }
+    }
+    @media only screen and (max-width:480px){
+        &__card{
+            display: block;
+            text-align: center;
+        }
+    }
+}

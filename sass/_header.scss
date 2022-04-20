@@ -1,0 +1,215 @@
+.header {
+    .checkbox {
+        display: none;
+    }
+
+    .fa-bars,
+    .fa-times {
+        display: none;
+        color: #004897;
+        font-size: 25px;
+    }
+
+    &__nav-1,
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__social:nth-child(n+1) {
+        margin-left: 50px;
+    }
+
+    &__nav-2 {
+        padding: 0;
+        background-color: #004897;
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    &__item {
+        padding: 27px 12px;
+        transition: all .25s;
+    }
+
+    &__item+&__item {
+        margin-left: 30px;
+    }
+
+    &__link,
+    input {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 25px;
+        color: #fff;
+    }
+
+    &__item:hover {
+        background-color: #F95252;
+        cursor: pointer;
+    }
+
+    form {
+        margin-left: auto;
+
+        .search {
+            border-radius: 10px;
+            padding: 0 10px;
+            width: 100%;
+            background-color: #fff;
+            height: 100%;
+            display: block;
+        }
+
+        .search-input {
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            height: 48px;
+            max-width: 270px;
+            padding: 10px;
+            color: rgba(0, 72, 151, 0.5);
+            ;
+        }
+
+        .fa-search {
+            color: #004897;
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width:1170px) {
+        &__item+&__item {
+            margin-left: 20px;
+        }
+
+    }
+
+    @media only screen and (max-width:1070px) {
+
+        &__item {
+            padding: 20px 6px;
+        }
+
+        &__item+&__item {
+            margin-left: 15px;
+        }
+
+        input {
+            max-width: 270px;
+        }
+    }
+
+    @media only screen and (max-width:980px) {
+        padding-bottom: 20px;
+        .container {
+            max-width: 940px;
+        }
+
+        &__nav-2 {
+            background-color: transparent;
+        }
+
+        .checkbox,
+        .fa-bars {
+            display: inline;
+        }
+
+        .checkbox {
+            visibility: hidden;
+        }
+
+        .toggle {
+            width: 100%;
+        }
+
+        &__list {
+            position: fixed;
+            margin: 0;
+            flex-direction: column;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            transform: translateX(-100%);
+            background-color: #004897;
+            transition: all .3s;
+            overflow: auto;
+        }
+
+        &__item,
+        &__item+&__item {
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        form {
+            margin: 0;
+
+            .search {
+                display: inline-block;
+                margin: 0;
+
+            }
+
+            .search-input {
+                text-align: center;
+            }
+        }
+
+        .checkbox:checked~.fa-bars {
+            display: none;
+        }
+
+        .checkbox:checked~.fa-times {
+            display: inline;
+        }
+
+        .checkbox:checked~&__list {
+            transform: translateX(0);
+        }
+    }
+
+    @media only screen and (max-width:576px) {
+        .container {
+            max-width: 530px;
+        }
+
+        &__logo img {
+            width: 180px;
+        }
+
+        &__social:nth-child(n+1) {
+            margin-left: 10px;
+        }
+
+        &__social img {
+            width: 30px;
+        }
+    }
+
+    @media only screen and (max-width:370px) {
+        .container {
+            width: 320px;
+        }
+
+        &__logo img {
+            width: 150px;
+        }
+
+        &__social:nth-child(n+1) {
+            margin-left: 10px;
+        }
+
+        &__social img {
+            width: 30px;
+        }
+    }
+}

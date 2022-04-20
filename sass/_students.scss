@@ -1,0 +1,119 @@
+.students{
+    padding: 31px 0 64px 0;
+    background-color: #F95252;
+    &__img img{
+        border-radius: 25px;
+    }
+    &__info{
+        margin-left: 24px;
+    }
+    &__title,
+    &__text{
+        color: #fff;
+    }
+    &__title{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    &__btn{
+        margin-top:70px;
+        display: flex;
+        justify-content: space-between;
+        .btn{
+            font-weight:700;
+            font-size: 30px;
+            line-height: 35px;
+            padding: 27px 80px;
+            background-color: #fff;
+            color: #F95252;
+            border-radius: 25px;
+            transition: all .25s;
+        }
+        .btn:hover{
+            background-color: #004897;
+            color: #fff;
+        }
+    }
+    @media only screen and (max-width:1170px){
+        &__btn{
+            display: block;
+            margin-top:80px;
+        }
+        .btn{
+            padding:20px 60px;
+        }
+        .btn:first-child{
+            margin-right: 10px;
+        }
+        &__img img{
+            width:450px;
+        }
+        &__text{
+            font-size:20px;
+        }
+    }
+    @media only screen and (max-width:955px){
+        &__title{
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+        &__btn{
+            margin-top:100px;
+        }
+        .btn{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    @media only screen and (max-width:890px){
+        &__img img{
+            width:350px;
+        }
+        &__btn{
+            margin-top:30px;
+        }
+        .btn{
+            padding: 15px 50px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+    @media only screen and (max-width:767px){
+        .works__flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__img img{
+            width:100%;
+         
+        }
+        &__title{
+            margin-top: 20px;
+        }
+        &__title,
+        &__text{
+            text-align: center;
+        }
+        &__btn{
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width:390px){
+        &__btn{
+            display: block;
+        }
+        .btn,
+        .active{
+            width: 100%;
+            display: inline-block;
+        }
+        .btn:first-child{
+            display:inline-block;
+            margin-right:0;
+            margin-bottom:40px;
+        }
+    }
+}
